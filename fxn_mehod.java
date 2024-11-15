@@ -1,4 +1,4 @@
-import java.util.*;
+//import java.util.*;
 public class fxn_mehod
 {
     public static void printHelloWorld()
@@ -161,7 +161,54 @@ public class fxn_mehod
         }
         System.out.println("Binary of "+myNum+" = "+bin);
     }
+    public static void avg(int a,int b, int c)
+    {
+        int avg = (a+b+c)/3;
+        System.out.println("Average = "+avg);
+    }
+    public static boolean isEven(int num)
+    {
+        boolean isEven = true;
+        if(num%2==0)
+        {
+            return isEven;
+        }
+        else
+        {
+            isEven= false;
+            return isEven;
+        }
+    }
 
+    public static boolean isPalindrome(int num)
+    {
+        int rem=0,rev=0,myNum=num;
+        while(num>0)
+        { 
+            rem = num%10;
+            rev = rev*10 + rem;
+            num/=10;
+        }
+        if(myNum==rev)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public static int num_sum(int num)
+    {
+        int r,sum=0;
+        while(num>0)
+        {
+            r = num%10;
+            sum = sum + r;
+            num/=10;
+        }
+        return sum;
+    }
     public static void main(String args[])
     {
         //printHelloWorld(); // function call
@@ -272,6 +319,7 @@ public class fxn_mehod
         // System.out.println(i);
 
         // Questions
+        
         //q1
         //avg(2,3,4);
 
@@ -303,8 +351,6 @@ public class fxn_mehod
         // int num = sc.nextInt();
         // System.out.println("Sum: "+num_sum(num));
         // sc.close();
-
-        
     }      
 }
      
