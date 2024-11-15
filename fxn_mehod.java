@@ -272,6 +272,37 @@ public class fxn_mehod
         // System.out.println(i);
 
         // Questions
+        //q1
+        //avg(2,3,4);
+
+        //q2
+        // Scanner sc = new Scanner(System.in);
+        // int num = sc.nextInt();
+        // boolean isEven = isEven(num);
+        // System.out.println(isEven);
+        // sc.close();
+
+        //q3
+        // Scanner sc = new Scanner(System.in);
+        // int num = sc.nextInt();
+        // boolean isPalindrome = isPalindrome(num);
+        // System.out.println(isPalindrome);
+        // sc.close();
+
+        //q4
+        // int a=2,b=4,c=-3;
+        // System.out.println(Math.min(a,b));
+        // System.out.println(Math.max(a,b));
+        // System.out.println(Math.sqrt(b));
+        // System.out.println(Math.pow(a,b));
+        // //System.out.println(Math.avg()); // Average method does not exist in java
+        // System.out.println(Math.abs(c));// returns absolute value -ve ko +ve kar deta hai
+        
+        //q5
+        // Scanner sc = new Scanner(System.in);
+        // int num = sc.nextInt();
+        // System.out.println("Sum: "+num_sum(num));
+        // sc.close();
 
         
     }      
