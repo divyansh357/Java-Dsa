@@ -9,6 +9,8 @@ public class Array
             marks[i]+=1;
         }
     }
+
+    //Linear Search
     public static int linear_search(int numbers[],int key)
     {
         for(int i=0;i<numbers.length;i++)
@@ -31,6 +33,8 @@ public class Array
         }
         return -1;
     } 
+
+    //Largest and smallest finder
     public static int getLargest(int numbers[])
     {
         int largest = Integer.MIN_VALUE; //-infinity
@@ -49,6 +53,8 @@ public class Array
         System.out.println("Samllest value is:"+smallest);
         return largest;
     }
+
+    //Binary Search
     public static int binary_search(int numbers[],int key)
     {
         int end = numbers.length-1;
@@ -73,6 +79,8 @@ public class Array
         }  
         return -1;
     }
+
+    //Reverse an array
     public static void reverse_array(int numbers[])
     {
         int first = 0;
@@ -86,6 +94,8 @@ public class Array
             last--;
         }
     }
+
+    //Print pairs
     public static void print_pairs(int numbers[])
     {
         int tp=0;
@@ -101,6 +111,8 @@ public class Array
         }
         System.out.println("Total pairs= "+tp);
     }
+
+    //Print Subarrays
     public static void print_subarray(int numbers[])
     {
         int ts=0;
@@ -121,25 +133,31 @@ public class Array
         }
         System.out.println("Total subarrays:"+ts);
     }
-    public static void sum_sub_arrays(int numbers[],int sum[])
+
+    //Max Sum Sub array brute force solution
+    public static void sum_sub_arrays(int numbers[])
     {
-        int x=0;
+        int max_sum = Integer.MIN_VALUE;
+        int curr_sum =0;
         for(int i=0;i<numbers.length;i++)
         {
             int start =i;
             for(int j=i;j<numbers.length;j++)
             {
                 int stop = j;
+                curr_sum=0;
                 for(int k=start;k<=stop;k++)
                 {
-                    System.out.print(numbers[k]+" ");
-                    sum[x]+=numbers[k];
+                    curr_sum+=numbers[k]; 
+                }  
+                System.out.println(curr_sum);
+                if(curr_sum>max_sum)
+                {
+                    max_sum=curr_sum;
                 }
-                System.out.println("Sum="+sum[x]);
-                x++;
             }
-            System.out.println();
         }
+        System.out.println("Maximum Sum="+max_sum);
     }
     public  static void main(String args[])
     {
@@ -245,13 +263,12 @@ public class Array
 
         // Sum of all Sub - arrays and find min and max sum
 
-        int numbers[] = {2,4,6,8,10};
+        int numbers[] = {1,-2,6,-1,3};
+        sum_sub_arrays(numbers); // Brute force 
+
         
-        int n = numbers.length;
-        int sum[] = new int[n*(n+1)/2];
-        sum_sub_arrays(numbers,sum);
-        int largest = getLargest(sum);
-        System.out.println("The sub array with largest sum is: "+largest);
+
+
 
 
     }
