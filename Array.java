@@ -159,6 +159,77 @@ public class Array
         }
         System.out.println("Maximum Sum="+max_sum);
     }
+
+    // Prefix Sum 
+    
+    public static void prefix_sum(int numbers[])
+    {
+        int prefix[] = new int[numbers.length];
+        int max_sum = Integer.MIN_VALUE;
+        int curr_sum = 0;
+        prefix[0]=numbers[0];
+        for(int i=1;i<numbers.length;i++)
+        {
+            prefix[i]=prefix[i-1]+numbers[i];
+        }
+        for(int i=0;i<numbers.length;i++)
+        {
+            int start = i;
+            for(int j=0;j<numbers.length;j++)
+            {
+                int end = j;
+                curr_sum = start==0? prefix[end] : prefix[end]-prefix[start-1];
+            }
+            if(max_sum < curr_sum)
+            {
+                max_sum = curr_sum;
+            }
+        }
+        System.out.println("Max Sum="+max_sum);
+    }
+
+    //Kadane's Algo
+    public static void Kadane_algo(int numbers[])
+    {
+        int ms = Integer.MIN_VALUE;
+        int cs = 0;
+        for(int i=0;i<numbers.length;i++)
+        {
+            cs = cs + numbers[i];
+            if(cs<0)
+            {
+                cs =0;
+            }
+            ms = Math.max(cs,ms);
+        }
+        System.out.println("Our maximum subarray sum is:"+ms);
+    }
+
+    // Kadane's Algo for all negative numbers
+    public static void Kadane_2(int numbers2[])
+    {
+        boolean negative = true;
+        for(int i=0;i<numbers2.length;i++)
+        {
+            if(numbers2[i]>0)
+            {
+                negative= false;
+            }
+        }
+        if(negative == true){
+        int ms = Integer.MIN_VALUE;
+        int cs = 0;
+        for(int i=0;i<numbers2.length;i++)
+        {
+            cs = cs + numbers2[i];
+            if(cs>ms)
+            {
+                ms = cs;
+            }
+        }
+        System.out.println("Our maximum subarray sum is:"+ms);
+        }
+    }
     public  static void main(String args[])
     {
         // CReating an array
@@ -263,13 +334,21 @@ public class Array
 
         // Sum of all Sub - arrays and find min and max sum
 
-        int numbers[] = {1,-2,6,-1,3};
-        sum_sub_arrays(numbers); // Brute force 
+        //int numbers[] = {-2,-3,4,-1,-2,1,5,-3};
+        // Brute force
+        //sum_sub_arrays(numbers); 
 
+        //Prefix Sum
+        //prefix_sum(numbers);
+
+        // Kadane's Algorithm
+        //Kadane_algo(numbers);
+
+        // Kadane's Algo for all -ve numbers
+        //int numbers2[]= {-1,-2,-3,-4};
+        //Kadane_2(numbers2);
+
+        // Trapping Rainwater
         
-
-
-
-
     }
 }
