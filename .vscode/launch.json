@@ -1,0 +1,161 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "basics",
+            "request": "launch",
+            "mainClass": "Trees.basics",
+            "projectName": "Java Dsa_b1e2c00"
+        },
+        {
+            "type": "java",
+            "name": "Recursion",
+            "request": "launch",
+            "mainClass": "Recursion",
+            "projectName": "Java Dsa_b1e2c00"
+        },
+        {
+            "type": "java",
+            "name": "oops",
+            "request": "launch",
+            "mainClass": "oops.oops",
+            "projectName": "Java Dsa_b1e2c00"
+        },
+        {
+            "type": "java",
+            "name": "Recursion",
+            "request": "launch",
+            "mainClass": "Recursion",
+            "projectName": "Java Dsa_312495e4"
+        },
+        {
+            "type": "java",
+            "name": "Bit_Manipulation",
+            "request": "launch",
+            "mainClass": "Bit_Manipulation",
+            "projectName": "Java Dsa_312495e4"
+        },
+        {
+            "type": "java",
+            "name": "Strings",
+            "request": "launch",
+            "mainClass": "Strings",
+            "projectName": "Java Dsa_312495e4"
+        },
+        {
+            "type": "java",
+            "name": "Hashing",
+            "request": "launch",
+            "mainClass": "Hashing",
+            "projectName": "Java Dsa_312495e4"
+        },
+        {
+            "type": "java",
+            "name": "a",
+            "request": "launch",
+            "mainClass": "a",
+            "projectName": "Java Dsa_312495e4"
+        },
+        {
+            "type": "java",
+            "name": "sol",
+            "request": "launch",
+            "mainClass": "sol",
+            "projectName": "Java Dsa_312495e4"
+        },
+        {
+            "type": "java",
+            "name": "two_d_array",
+            "request": "launch",
+            "mainClass": "two_d_array",
+            "projectName": "Java Dsa_312495e4"
+        },
+        {
+            "type": "java",
+            "name": "sorting",
+            "request": "launch",
+            "mainClass": "sorting",
+            "projectName": "Java Dsa_312495e4"
+        },
+        {
+            "type": "java",
+            "name": "Array",
+            "request": "launch",
+            "mainClass": "Array",
+            "projectName": "Java Dsa_312495e4"
+        },
+        {
+            "type": "java",
+            "name": "fxn_mehod",
+            "request": "launch",
+            "mainClass": "fxn_mehod",
+            "projectName": "Java Dsa_312495e4"
+        },
+        {
+            "type": "java",
+            "name": "Pattern",
+            "request": "launch",
+            "mainClass": "Pattern",
+            "projectName": "Java Dsa_312495e4"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Conditional_statement",
+            "request": "launch",
+            "mainClass": "Conditional_statement",
+            "projectName": "Java Dsa_312495e4"
+        },
+        {
+            "type": "java",
+            "name": "basics2",
+            "request": "launch",
+            "mainClass": "basics2",
+            "projectName": "Java Dsa_312495e4"
+        },
+        {
+            "type": "java",
+            "name": "basics3",
+            "request": "launch",
+            "mainClass": "basics3",
+            "projectName": "Java Dsa_312495e4"
+        },
+        {
+            "type": "java",
+            "name": "javabasics",
+            "request": "launch",
+            "mainClass": "javabasics",
+            "projectName": "Java Dsa_312495e4"
+        },
+        {
+            "type": "java",
+            "name": "loops",
+            "request": "launch",
+            "mainClass": "loops",
+            "projectName": "Java Dsa_312495e4"
+        },
+        {
+            "type": "java",
+            "name": "operators",
+            "request": "launch",
+            "mainClass": "operators",
+            "projectName": "Java Dsa_312495e4"
+        },
+        {
+            "type": "java",
+            "name": "problems",
+            "request": "launch",
+            "mainClass": "problems",
+            "projectName": "Java Dsa_312495e4"
+        }
+    ]
+}
