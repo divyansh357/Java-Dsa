@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ArrayList1",
+            "request": "launch",
+            "mainClass": "ArrayList.ArrayList1",
+            "projectName": "Java Dsa_b1e2c00"
+        },
+        {
+            "type": "java",
             "name": "basics",
             "request": "launch",
             "mainClass": "Trees.basics",
