@@ -1,5 +1,6 @@
 package ArrayList;
 
+import java.lang.reflect.Array;
 import java.util.*;
 public class ArrayList1 {
 
@@ -9,19 +10,19 @@ public class ArrayList1 {
         list.set(idx2,temp);
     }
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
-        ArrayList<String> list2 = new ArrayList<>();
-        ArrayList<Boolean> list3 = new ArrayList<>();
+        // ArrayList<Integer> list = new ArrayList<>();
+        // ArrayList<String> list2 = new ArrayList<>();
+        // ArrayList<Boolean> list3 = new ArrayList<>();
 
-        list.add(2);
-        list.add(2);
-        list.add(9);
-        list.add(4);
-        list.add(2);
+        // list.add(2);
+        // list.add(2);
+        // list.add(9);
+        // list.add(4);
+        // list.add(2);
 
-        list.add(1,12);
+        // list.add(1,12);
 
-        System.out.println(list);
+        // System.out.println(list);
 
         // Get Element 
         // int element = list.get(2);
@@ -73,6 +74,30 @@ public class ArrayList1 {
 
         // Collections.sort(list, Collections.reverseOrder()); // Sort in descending Order By Comparator fxn- reverseOrder()- logics
         // System.out.println(list);
+
+        // 2-D Array 
+        ArrayList<ArrayList<Integer>> mainList = new ArrayList<>();
+
+        ArrayList<Integer> list1 = new ArrayList<>();
+        list1.add(1);
+        list1.add(2);
+
+        mainList.add(list1);
+
+        ArrayList<Integer> list2 = new ArrayList<>();
+        list2.add(3);
+        list2.add(4);
+
+        mainList.add(list2);
+
+        for(int i=0;i<mainList.size();i++){
+            ArrayList<Integer> arr = mainList.get(i);
+            for(int j=0;j<arr.size();j++){
+                System.out.print(arr.get(j)+" ");
+            }
+            System.out.println();
+        }
+        System.out.println(mainList);
 
     }
 
