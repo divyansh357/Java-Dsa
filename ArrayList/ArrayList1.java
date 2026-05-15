@@ -9,6 +9,20 @@ public class ArrayList1 {
         list.set(idx1,list.get(idx2));
         list.set(idx2,temp);
     }
+
+    //Container with most water 
+    public static int  contains_water(ArrayList<Integer> list){
+        // Brute-force
+        int max = 0;
+        for(int i=0;i<list.size();i++){
+            for(int j=i;j<list.size();j++){
+                int height = Math.min(list.get(i),list.get(j));
+                int width = j-1;
+                max = Math.max(max,height*width);
+            }
+        }
+        return max;
+    }
     public static void main(String[] args) {
         // ArrayList<Integer> list = new ArrayList<>();
         // ArrayList<String> list2 = new ArrayList<>();
@@ -122,7 +136,43 @@ public class ArrayList1 {
         // }
         // System.out.println();
 
-        //
+        //Container with most water 
+
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(8);
+        list.add(6);
+        list.add(2);
+        list.add(5);
+        list.add(4);
+        list.add(8);
+        list.add(3);
+        list.add(7);
+        System.out.println(contains_water(list));
+
+
+        // Two Sum-2
+        class Solution {
+            public int[] twoSum(int[] numbers, int target) {
+                int l =0, r= numbers.length -1;
+                while(l<r){
+                    int curSum = numbers[l] + numbers[r];
+                    if(curSum > target){
+                        r--;
+                    }
+                    else if(curSum < target){
+                        l++;
+                    }
+                    else{
+                        return new int [] {l+1,r+1};
+                    }
+                }
+                return new int[0];
+            }
+        }
+        
+        
+
 
 
     }
