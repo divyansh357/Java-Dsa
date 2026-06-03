@@ -6,20 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "basics3",
-            "request": "launch",
-            "mainClass": "basics.basics3",
-            "projectName": "Java Dsa_b1e2c00"
-        },
-        {
-            "type": "java",
-            "name": "ArrayList1",
-            "request": "launch",
-            "mainClass": "ArrayList.ArrayList1",
-            "projectName": "Java Dsa_b1e2c00"
-        },
-        {
-            "type": "java",
             "name": "basics",
             "request": "launch",
             "mainClass": "Trees.basics",

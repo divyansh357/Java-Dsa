@@ -13,16 +13,55 @@ public class ArrayList1 {
     //Container with most water 
     public static int  contains_water(ArrayList<Integer> list){
         // Brute-force
-        int max = 0;
-        for(int i=0;i<list.size();i++){
-            for(int j=i;j<list.size();j++){
-                int height = Math.min(list.get(i),list.get(j));
-                int width = j-1;
-                max = Math.max(max,height*width);
+        // int max = 0;
+        // for(int i=0;i<list.size();i++){
+        //     for(int j=i;j<list.size();j++){
+        //         int height = Math.min(list.get(i),list.get(j));
+        //         int width = j-1;
+        //         max = Math.max(max,height*width);
+        //     }
+        // }
+
+        // 2-Pointer Approach
+
+        int maxWater = 0;
+        int height =0, width=0;
+        int lp = 0, rp = list.size()-1;
+        while(lp<rp){
+            // calculate water area
+            height = Math.min(list.get(lp),list.get(rp));
+            width = rp - lp;
+            int currWater = width * height;
+            maxWater = Math.max(maxWater, currWater);
+
+            // Update ptr
+            if(list.get(lp)<list.get(rp)){
+                lp++;
+            }
+            else{
+                rp--;
             }
         }
-        return max;
+
+        return maxWater;
     }
+
+    // Pair Sum -1
+    public static boolean pairSum1(ArrayList<Integer> nums, int target){
+        // Brute -force
+        for(int i=0;i<nums.size();i++){
+            for(int j =i+1;j<nums.size();j++){
+                if(nums.get(i)+nums.get(j)== target)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    
+
+
     public static void main(String[] args) {
         // ArrayList<Integer> list = new ArrayList<>();
         // ArrayList<String> list2 = new ArrayList<>();
@@ -138,39 +177,26 @@ public class ArrayList1 {
 
         //Container with most water 
 
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(8);
-        list.add(6);
-        list.add(2);
-        list.add(5);
-        list.add(4);
-        list.add(8);
-        list.add(3);
-        list.add(7);
-        System.out.println(contains_water(list));
+        // ArrayList<Integer> list = new ArrayList<>();
+        // list.add(1);
+        // list.add(8);
+        // list.add(6);
+        // list.add(2);
+        // list.add(5);
+        // list.add(4);
+        // list.add(8);
+        // list.add(3);
+        // list.add(7);
+        // System.out.println(contains_water(list));
 
-
-        // Two Sum-2
-        class Solution {
-            public int[] twoSum(int[] numbers, int target) {
-                int l =0, r= numbers.length -1;
-                while(l<r){
-                    int curSum = numbers[l] + numbers[r];
-                    if(curSum > target){
-                        r--;
-                    }
-                    else if(curSum < target){
-                        l++;
-                    }
-                    else{
-                        return new int [] {l+1,r+1};
-                    }
-                }
-                return new int[0];
-            }
+        // Pair Sum -1
+        ArrayList<Integer> nums = new ArrayList<>();
+        for(int i=1;i<=6;i++){
+            nums.add(i);
         }
-        
+        int target = 5;
+        System.out.println(pairSum1(nums, target));
+
         
 
 
