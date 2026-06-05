@@ -49,18 +49,83 @@ public class ArrayList1 {
     // Pair Sum -1
     public static boolean pairSum1(ArrayList<Integer> nums, int target){
         // Brute -force
-        for(int i=0;i<nums.size();i++){
-            for(int j =i+1;j<nums.size();j++){
-                if(nums.get(i)+nums.get(j)== target)
-                {
-                    return true;
-                }
+        // for(int i=0;i<nums.size();i++){
+        //     for(int j =i+1;j<nums.size();j++){
+        //         if(nums.get(i)+nums.get(j)== target)
+        //         {
+        //             return true;
+        //         }
+        //     }
+        // }
+        // return false;
+
+        // 2- Pointer
+        int lp = 0;
+        int rp = nums.size()-1;
+        while(lp!=rp){
+            if(nums.get(lp)+nums.get(rp)==target){
+                return true;
+            }
+            else if(nums.get(lp)+nums.get(rp)>target){
+                rp--;
+            }
+            else{
+                lp++;
+            }
+        }
+        return false;
+    }
+
+    public static boolean Ps2(ArrayList<Integer> list, int target) {
+        if (list == null || list.size() < 2) {
+        return false;
+        }
+        int n = list.size();
+        int lp = 0, rp = n - 1;
+        for(int i=0;i<n-1;i++){
+            if(list.get(i)>list.get(i+1)){
+                lp = i+1;
+                rp = i;
+                break;
+            }
+        }
+        int currSum =0;
+        while(lp!=rp){
+            currSum = list.get(lp) + list.get(rp);
+            if(currSum == target){
+                return true;
+            }
+            else if(currSum<target){
+                lp = (lp+1)%n;
+            }
+            else{
+                rp = (n+rp-1)%n;
             }
         }
         return false;
     }
     
 
+    //q1 - Check Monotonic 
+    public static boolean checkMonotonic(ArrayList<Integer> list){
+        boolean increasing = true;
+        boolean decreasing = true;
+        for(int i=0;i<list.size()-1;i++){
+            if(list.get(i)>=list.get(i+1)){
+                increasing = false;
+            }
+            if(list.get(i)<=list.get(i+1)){
+                decreasing = false;
+            }
+        }
+        if(increasing || decreasing){
+            return true;
+        }
+        return false;    
+    }
+
+    //q2
+    
 
     public static void main(String[] args) {
         // ArrayList<Integer> list = new ArrayList<>();
@@ -190,14 +255,31 @@ public class ArrayList1 {
         // System.out.println(contains_water(list));
 
         // Pair Sum -1
-        ArrayList<Integer> nums = new ArrayList<>();
-        for(int i=1;i<=6;i++){
-            nums.add(i);
-        }
-        int target = 5;
-        System.out.println(pairSum1(nums, target));
+        // ArrayList<Integer> nums = new ArrayList<>();
+        // for(int i=1;i<=6;i++){
+        //     nums.add(i);
+        // }
+        // int target = 5;
+        // System.out.println(pairSum1(nums, target));
 
-        
+        // Pair Sum -2
+        // ArrayList<Integer> list = new ArrayList<>();
+        // int target = 16;
+        // list.add(11);
+        // list.add(15);
+        // list.add(6);
+        // list.add(8);
+        // list.add(9);
+        // list.add(10);
+        // System.out.println(Ps2(list, target));
+
+        // ArrayList Sheet
+        //q1
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(3);
+        list.add(2);
+        System.out.print(checkMonotonic(list));
 
 
 
