@@ -1,3 +1,4 @@
+package Recursion;
 public class Recursion {
     // Problem 1 
     public static void printDec(int n){

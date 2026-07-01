@@ -124,7 +124,24 @@ public class ArrayList1 {
         return false;    
     }
 
-    //q2
+    //q2 - Lonely numbers in an ArrayList 
+    
+
+    //q4- Beautiful ArrayList
+    public static ArrayList<Integer> beautifulArray(int n){
+        ArrayList<Integer> ans = new ArrayList<>();
+        ans.add(1);
+        for(int i=2;i<=n;i++){
+            ArrayList<Integer> temp = new ArrayList<>();
+            for(Integer e : ans){
+                if(e*2<=n) temp.add(e*2);
+            }
+            for(Integer e : ans) if(e*2-1 <=n) temp.add(e*2-1);
+
+            ans = temp;
+        }
+        return ans;
+    }
     
 
     public static void main(String[] args) {
@@ -275,13 +292,18 @@ public class ArrayList1 {
 
         // ArrayList Sheet
         //q1
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(3);
-        list.add(2);
-        System.out.print(checkMonotonic(list));
+        // ArrayList<Integer> list = new ArrayList<>();
+        // list.add(1);
+        // list.add(3);
+        // list.add(2);
+        // System.out.print(checkMonotonic(list));
 
-
+        //q2
+        int n = 5;
+        ArrayList<Integer> nums = beautifulArray(n);
+        for(int i=0;i<nums.size();i++){
+            System.out.println(nums.get(i));
+        }
 
     }
 
