@@ -127,7 +127,23 @@ public class ArrayList1 {
     //q2 - Lonely numbers in an ArrayList 
     
 
-    //q4- Beautiful ArrayList
+    //q4- Beautiful ArrayList : Even/Odd Iterative 
+    // public static ArrayList<Integer> beautifulArray(int n){
+    //     ArrayList<Integer> ans = new ArrayList<>();
+    //     ans.add(1);
+    //     for(int i=2;i<=n;i++){
+    //         ArrayList<Integer> temp = new ArrayList<>();
+    //         for(Integer e : ans){
+    //             if(e*2<=n) temp.add(e*2);
+    //         }
+    //         for(Integer e : ans) if(e*2-1 <=n) temp.add(e*2-1);
+
+    //         ans = temp;
+    //     }
+    //     return ans;
+    // }
+    
+    //Beautiful ArrayList : Divide and Conquer
     public static ArrayList<Integer> beautifulArray(int n){
         ArrayList<Integer> ans = new ArrayList<>();
         ans.add(1);
