@@ -3,9 +3,11 @@ package CollectionFramework;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Basics {
 
@@ -87,33 +89,59 @@ public class Basics {
 
         // "Check whether an element exists."
 
-        Set<Integer> set = new HashSet<>();
+        // Set<Integer> set = new HashSet<>();
 
-        set.add(1);
-        set.add(2);
-        set.add(3);
-        set.add(2);
-        set.add(1);
+        // set.add(1);
+        // set.add(2);
+        // set.add(3);
+        // set.add(2);
+        // set.add(1);
 
         // The duplicates are ignored.
 
 
 
         // Find duplicate
-        int[] arr = {1, 2, 3, 4, 2};
+        // int[] arr = {1, 2, 3, 4, 2};
 
-        Set<Integer> seen = new HashSet<>();
+        // Set<Integer> seen = new HashSet<>();
 
-        for (int x : arr) {
+        // for (int x : arr) {
 
-            if (seen.contains(x)) {
-                System.out.println("Duplicate: " + x);
-                break;
-            }
+        //     if (seen.contains(x)) {
+        //         System.out.println("Duplicate: " + x);
+        //         break;
+        //     }
 
-            seen.add(x);
-        }
+        //     seen.add(x);
+        // }
 
+        // LinkedHashSet - like a HashSet, but it remembers insertion order.
+
+        // Set<Integer> set = new LinkedHashSet<>();
+        // set.add(30);
+        // set.add(10);
+        // set.add(20);
+
+        // for(Integer s : set){
+        //     System.out.println(s);
+        // }
+
+        //HashSet
+        // → uniqueness + fast lookup
+
+        // LinkedHashSet
+        // → uniqueness + insertion order
+
+        // TreeSet - keeps elements sorted. -  unique + sorted
+
+        Set<Integer> set = new TreeSet<>();
+
+        set.add(30);
+        set.add(10);
+        set.add(20);
+
+        System.out.println(set);
 
 
 
