@@ -1,12 +1,18 @@
 package CollectionFramework;
 
+import java.security.Key;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Queue;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 public class Basics {
@@ -135,17 +141,83 @@ public class Basics {
 
         // TreeSet - keeps elements sorted. -  unique + sorted
 
-        Set<Integer> set = new TreeSet<>();
+        // Set<Integer> set = new TreeSet<>();
 
-        set.add(30);
-        set.add(10);
-        set.add(20);
+        // set.add(30);
+        // set.add(10);
+        // set.add(20);
 
-        System.out.println(set);
+        // System.out.println(set);
+
+        // Map — Key → Value
 
 
+        // HashMap -  gives average O(1) lookup, insertion and removal.
 
+        // Map<String, Integer> marks = new HashMap<>();
+        // marks.put("Divyansh", 95);
+        // marks.put("Rahul", 87);
+        // marks.put("Aman", 91);
 
+        // System.out.println(marks.get("Rahul"));
+
+        // int[] arr = {1, 2, 3, 4, 2};
+        // Map<Integer, Integer> freq = new HashMap<>();
+
+        // for (int x : arr) {
+        //     freq.put(x, freq.getOrDefault(x, 0) + 1);
+        // }
+
+        //HashSet → element
+        //HashMap → key + value
+
+        // LinkedHashMap - Like HashMap, but maintains insertion order.
+
+        // Useful when you need:
+
+       //Key-value mapping + predictable insertion order
+
+        // Map<String, Integer> map = new LinkedHashMap<>();
+        // map.put("A",10);
+        // map.put("B",5);
+        // map.put("C",7);
+
+        // System.out.println(map);
+
+        // TreeMap - keeps keys sorted.
+
+        //Operations are O(log n) generally
+
+        // Map<Integer, String> map = new TreeMap<>();
+
+        // map.put(30, "C");
+        // map.put(10, "A");
+        // map.put(20, "B");
+
+        // System.out.println(map);
+
+        //HashMap
+        // → fast key lookup
+
+        // TreeMap
+        // → sorted keys
+
+        // Queue — First In, First Out
+
+        Queue<Integer> queue = new ArrayDeque<>();
+
+        queue.offer(10);
+        queue.offer(20);
+        queue.offer(30);
+
+        queue.poll();
+
+       // offer()  // add
+       // poll()   // remove
+       // peek()   // look at front
+
+       //
+        
     }
     
 }
