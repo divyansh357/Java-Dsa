@@ -3,6 +3,7 @@ package CollectionFramework;
 import java.security.Key;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
@@ -216,8 +217,14 @@ public class Basics {
        // poll()   // remove
        // peek()   // look at front
 
-       //
-        
+       // Stack — LIFO
+       // In modern Java, prefer:  Java has an old Stack class, but for stack behavior, ArrayDeque is generally preferred.
+       Deque<Integer> stack = new ArrayDeque<>();
+       stack.push(10);
+       stack.push(20);
+       stack.push(30);
+
+       System.out.println(stack.pop());
     }
     
 }
