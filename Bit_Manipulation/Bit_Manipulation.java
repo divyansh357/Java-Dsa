@@ -1,3 +1,4 @@
+package Bit_Manipulation;
 public class Bit_Manipulation {
     //Even and Odd
     public static void evenOrOdd(int n){

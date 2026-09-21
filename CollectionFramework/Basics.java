@@ -3,6 +3,7 @@ package CollectionFramework;
 import java.security.Key;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -11,6 +12,7 @@ import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Set;
 import java.util.TreeMap;
@@ -205,13 +207,13 @@ public class Basics {
 
         // Queue — First In, First Out
 
-        Queue<Integer> queue = new ArrayDeque<>();
+        // Queue<Integer> queue = new ArrayDeque<>();
 
-        queue.offer(10);
-        queue.offer(20);
-        queue.offer(30);
+        // queue.offer(10);
+        // queue.offer(20);
+        // queue.offer(30);
 
-        queue.poll();
+        // queue.poll();
 
        // offer()  // add
        // poll()   // remove
@@ -219,12 +221,32 @@ public class Basics {
 
        // Stack — LIFO
        // In modern Java, prefer:  Java has an old Stack class, but for stack behavior, ArrayDeque is generally preferred.
-       Deque<Integer> stack = new ArrayDeque<>();
-       stack.push(10);
-       stack.push(20);
-       stack.push(30);
+    //    Deque<Integer> stack = new ArrayDeque<>();
+    //    stack.push(10);
+    //    stack.push(20);
+    //    stack.push(30);
 
-       System.out.println(stack.pop());
+    //    System.out.println(stack.pop());
+
+    // PriorityQueue - removes according to priority.
+    // By default, Java's PriorityQueue is a min-heap:
+
+    //When should you think PriorityQueue? =  "Repeatedly give me the smallest element." OR "Repeatedly give me the largest element."
+
+    PriorityQueue<Integer> queue = new PriorityQueue<>();
+
+    queue.offer(20);
+    queue.offer(10);
+    queue.offer(30);
+
+    System.out.println(queue.poll());
+
+    // For maximum:
+    // PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+
+
+
+
     }
     
 }

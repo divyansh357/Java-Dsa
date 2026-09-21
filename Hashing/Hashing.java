@@ -1,4 +1,9 @@
-import java.util.*; 
+package Hashing;
+import java.util.*;
+
+import Hashing;
+import Hashing.Hashmap;
+import Hashing.Hashmap.Node; 
 public class Hashing
 {
    // Hashmap Implementation
