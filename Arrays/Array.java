@@ -584,9 +584,9 @@ public class Array
 
         // Sum of all Sub - arrays and find min and max sum
 
-        int numbers[] = {-2,-3,4,-1,-2,1,5,-3};
-        //Brute force
-        sum_sub_arrays(numbers); 
+        // int numbers[] = {-2,-3,4,-1,-2,1,5,-3};
+        // //Brute force
+        // sum_sub_arrays(numbers); 
 
         //Prefix Sum
         //prefix_sum(numbers);
@@ -594,9 +594,9 @@ public class Array
         // Kadane's Algorithm
         //Kadane_algo(numbers);
 
-        // Kadane's Algo for all -ve numbers
-        //int numbers2[]= {-1,-2,-3,-4};
-        //Kadane_2(numbers2);
+        //Kadane's Algo for all -ve numbers
+        int numbers2[]= {-1,-2,-3,-4};
+        Kadane_2(numbers2);
 
         // Trapping Rainwater
         // int height[] = {4,2,0,6,3,2,5};
@@ -627,11 +627,11 @@ public class Array
         // System.out.println("Trapped Rainwater= "+rain(height));
 
         // q5=threeSum
-        Array example = new Array();
-        int nums[]= {-1,0,1,2-1,-4};
+        // Array example = new Array();
+        // int nums[]= {-1,0,1,2-1,-4};
 
-        List<List<Integer>> result = example.threeSum(nums);
+        // List<List<Integer>> result = example.threeSum(nums);
 
-        System.out.println("Triplets of sum 0: "+ result);
+        // System.out.println("Triplets of sum 0: "+ result);
     }        
 }

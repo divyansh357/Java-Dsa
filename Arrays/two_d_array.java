@@ -184,6 +184,12 @@ public class two_d_array
             System.out.println();
         }
     }
+
+    // Practice - spiral
+    public void Spiral(int mat[][]){
+        
+    }
+
     public static void main(String args[])
     {
     //creation

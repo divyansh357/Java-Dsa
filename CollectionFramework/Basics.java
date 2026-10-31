@@ -164,12 +164,14 @@ public class Basics {
 
         // System.out.println(marks.get("Rahul"));
 
-        // int[] arr = {1, 2, 3, 4, 2};
-        // Map<Integer, Integer> freq = new HashMap<>();
+        int[] arr = {1, 2, 3, 4, 2};
+        Map<Integer, Integer> freq = new HashMap<>();
 
-        // for (int x : arr) {
-        //     freq.put(x, freq.getOrDefault(x, 0) + 1);
-        // }
+        for (int x : arr) {
+            freq.put(x, freq.getOrDefault(x, 0) + 1);
+        }
+
+        System.out.println(freq);
 
         //HashSet → element
         //HashMap → key + value
