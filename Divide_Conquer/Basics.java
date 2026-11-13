@@ -87,20 +87,67 @@ public class Basics {
         arr[i] = temp;
         return i;
     }
+
+    // Search in Rotated Sorted Array
+
+     public static int sorted_rotated(int[] arr, int target, int si , int ei) {
+        int mid = si + (ei-si)/2;
+
+        if(si>ei){
+            return -1;
+        }
+
+        if(target == arr[mid]){
+            return mid;
+        }
+
+        // mid on L1
+        if(arr[si]<=arr[mid]){
+            // case a : 
+            if(arr[si]<=target && target <=arr[mid]){
+                return sorted_rotated(arr, target, si, mid-1);
+            }
+            // case b:
+            else{
+                return sorted_rotated(arr, target, mid+1, ei);
+            }
+        }
+        // mid on L2
+        else{
+            // case c :
+            if(arr[mid]<=target && target<=arr[ei]){
+               return  sorted_rotated(arr, target, mid+1, ei);
+            }
+            else{
+                 return sorted_rotated(arr, target, si, mid-1);
+            }
+        }
+    }
+
+
     public static void main(String[] args) {
-        int[] arr= {1,5,2,2,3,3,4,-2};
+        //int[] arr= {1,5,2,2,3,3,4,-2};
 
         // Merge Sort
         // mergeSort(arr,0,arr.length-1);
         // printArr(arr);
 
         // Quick Sort
-        quickSort(arr, 0,arr.length -1);
-        printArr(arr);
+        // quickSort(arr, 0,arr.length -1);
+        // printArr(arr);
+
+        // Search in Rotated Sorted Array
+
+        int arr[] = {4,5,6,7,0,1,2};
+        int target = 0;
+        int pos = sorted_rotated(arr,target,0,arr.length -1);
+        System.out.println(pos);
 
         
 
     }
+
+   
     
     
 }
